@@ -1,4 +1,6 @@
-public class Vector3D {
+import java.io.Serializable;
+
+public class Vector3D implements Serializable{
     private String name;
     private double x;
     private double y;
@@ -36,6 +38,39 @@ public class Vector3D {
     public String toString() {
         return name + ": [" + x + ", " + y + ", " + z + "]";
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
 
 }
 
