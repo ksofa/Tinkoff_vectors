@@ -1,7 +1,8 @@
 # Tinkoff_vectors
 Использую паттерн Command 
 https://refactoring.guru/ru/design-patterns/command
-Был заменен switch на паттерн Command, так как если делать просто switch то большой минус - когнитивная сложность. 
+
+#Был заменен switch на паттерн Command, так как если делать просто switch то большой минус - когнитивная сложность. 
 Реализованы следующие операции: 
 create $название $x $y $z
 
