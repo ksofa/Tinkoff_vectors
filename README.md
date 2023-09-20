@@ -2,7 +2,7 @@
 Использую паттерн Command 
 https://refactoring.guru/ru/design-patterns/command
 
-Был заменен switch на паттерн Command, так как если делать просто switch то большой минус - когнитивная сложность. 
+Был заменен switch на паттерн Command. 
 
 
 
@@ -29,9 +29,7 @@ https://refactoring.guru/ru/design-patterns/command
 
 6) ```exit```
     - завершить программу
-
-
-Опционально 
+    - 
 7) ```save $имяФайла```
    - Сохранить коллекцию векторов в файл 
 
