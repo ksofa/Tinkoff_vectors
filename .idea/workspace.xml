@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c53bfa93-af15-46a2-b45f-b17dfc2ecc61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Vector3D.java" afterDir="false" />
+    <list default="true" id="c53bfa93-af15-46a2-b45f-b17dfc2ecc61" name="Changes" comment="Добавлены 7 и 8">
+      <change afterPath="$PROJECT_DIR$/src/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CreateCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ReadCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -14,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,6 +48,21 @@
       <option name="presentableId" value="Default" />
       <updated>1695129274956</updated>
     </task>
+    <task id="LOCAL-00001" summary="Добавлены базовые 6 операций">
+      <created>1695130198448</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695130198448</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Добавлены 7 и 8">
+      <created>1695132449223</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695132449223</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -57,5 +75,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавлены базовые 6 операций" />
+    <MESSAGE value="Добавлены 7 и 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены 7 и 8" />
   </component>
 </project>

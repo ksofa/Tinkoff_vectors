@@ -3,7 +3,11 @@ import java.util.*;
 
 public class Main {
     private static Map<String, Vector3D> vectors = new HashMap<>();
-
+    private static final Map<String, Command> commands = new HashMap<>();
+    static {
+        commands.put("create", new CreateCommand(vectors));
+        commands.put("read", new ReadCommand(vectors));
+    }
     public static void main(String[] args) {
         printInstructions();
 
@@ -12,52 +16,12 @@ public class Main {
             System.out.print("Введите команду: ");
             String input = scanner.nextLine();
             String[] parts = input.split(" ");
-
-            switch (parts[0].toLowerCase()) {
-                case "create":
-                    vectors.put(parts[1], new Vector3D(parts[1], Double.parseDouble(parts[2]), Double.parseDouble(parts[3]), Double.parseDouble(parts[4])));
-                    System.out.println("Вектор " + parts[1] + " создан.");
-                    break;
-
-                case "read":
-                    vectors.forEach((k, v) -> System.out.println(v));
-                    break;
-
-                case "range":
-                    System.out.println("Длина вектора: " + vectors.get(parts[1]).length());
-                    break;
-
-                case "angle":
-                    double angle = Vector3D.angle(vectors.get(parts[1]), vectors.get(parts[2]));
-                    System.out.println("Угол между векторами: " + angle);
-                    break;
-
-                case "product":
-                    if ("dot".equals(parts[1])) {
-                        double dotProduct = Vector3D.dotProduct(vectors.get(parts[2]), vectors.get(parts[3]));
-                        System.out.println("Скалярное произведение: " + dotProduct);
-                    }
-                    if ("cross".equals(parts[1])) {
-                        Vector3D crossProduct = Vector3D.crossProduct(vectors.get(parts[2]), vectors.get(parts[3]));
-                        System.out.println("Векторное произведение: " + crossProduct);
-                    }
-                    break;
-
-                case "save":
-                    saveToFile(parts[1]);
-                    break;
-
-                case "load":
-                    loadFromFile(parts[1]);
-                    break;
-
-                case "exit":
-                    System.out.println("Программа завершена.");
-                    return;
-
-                default:
-                    System.out.println("Неизвестная команда.");
-                    printInstructions();
+            Command command = commands.get(parts[0].toLowerCase());
+            if (command != null) {
+                command.execute(parts);
+            } else {
+                System.out.println("Неизвестная команда");
+                printInstructions();
             }
         }
     }
